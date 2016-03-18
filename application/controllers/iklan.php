@@ -256,6 +256,8 @@ class Iklan extends CI_Controller {
               $data['favorit']=$this->model_iklan->query_for_control("SELECT count(id_favorite) as favorit from favorite where id_user=".$_SESSION['id_user']);
 
             }
+             $data['share']=site_url()."iklan/view/$id/".$this->uri->segment(4);
+           
             $data['meta']['keywords']=$data['iklan']['judul_iklan'];
             $data['id']=$id;
             $this->load->view('head',$data);

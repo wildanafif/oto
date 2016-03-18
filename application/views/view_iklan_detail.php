@@ -206,6 +206,17 @@
 		   </center>
 		   
 	</div>
+		<div class="share-buttons" style="margin-bottom: 20px;">
+					<!-- Facebook -->
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $share; ?>" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="icon-white icon-facebook"></i> Facebook</a>
+					<!-- Twitter -->
+					<a href="http://twitter.com/home?status=<?php echo $share; ?>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="icon-white icon-twitter"></i> Twitter</a>
+					<!-- Google+ -->
+					<a href="https://plus.google.com/share?url=<?php echo $share; ?>" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="icon-white icon-google"></i> Google+</a>
+					
+					<!-- LinkedIn --> 
+					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=<?php echo $share; ?>" title="Share on LinkedIn" target="_blank" class="btn btn-stumbleupon"><i class="icon-white  icon-linkedin"></i>LinkedIn</a>
+				</div>
 
   </div>
 </div>

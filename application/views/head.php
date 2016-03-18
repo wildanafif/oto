@@ -7,7 +7,8 @@
     <meta name="description" content="Otomotifstore tempat jual beli otomotif"/>
     <meta name="keywords" content="otomotifstore <?php if (isset($meta['keywords'])) {
         echo ",".$meta['keywords'];
-    } ?>" />
+    } ?>" />\
+    <link href="<?=base_url()?>assets/css/social-sharing-buttons.css" rel="stylesheet" type="text/css" media="all" />   
     <link href="<?=base_url()?>assets/css/style_image_view.css" rel="stylesheet" type="text/css" media="all" />   
     <link href="<?=base_url()?>assets/css/Site.min.css" rel="stylesheet">
     <link href="<?=base_url()?>assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
