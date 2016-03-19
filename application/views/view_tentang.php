@@ -6,7 +6,7 @@
                 <div class="container row">
                   <div class="col-md-5">
                     <div class="panel panel-default">
-                    <div class="panel-heading"><h3 style="text-align:center;">Otomofifstore.com</h3></div>
+                    <div class="panel-heading"><h3 style="text-align:center;">Otomotifstore.com</h3></div>
                     <div class="panel-body" style="background-color:#f5f5f5;" >
                     <br> 
                     <a href="<?=base_url()?>about">

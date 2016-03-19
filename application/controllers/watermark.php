@@ -49,6 +49,29 @@ function watermark_image_jpg($oldimage_name, $new_image_name){
     unlink($oldimage_name);
     return true;
 }
+function watermark_image_jpeg($oldimage_name, $new_image_name){
+    $text_show  = "otomotifstore"; // watermark text
+    $image_show = "assets/wtr3.png";   // watermark image
+    $image_path =  $image_show ; 
+    $font_path  = "GILSANUB.TTF"; // font
+    $font_size  = 20;       // contoh 20 = 20px  
+    $path = "uploads/"; 
+    list($owidth,$oheight) = getimagesize($oldimage_name);
+    $width = $height = 300;    // tentukan ukuran gambar akhir, contoh: 300 x 300
+    $im = imagecreatetruecolor($width, $height);
+    $img_src = imagecreatefromjpeg($oldimage_name);
+    imagecopyresampled($im, $img_src, 0, 0, 0, 0, $width, $height, $owidth, $oheight);
+    $watermark = imagecreatefrompng($image_path);
+    list($w_width, $w_height) = getimagesize($image_path);        
+    $pos_x = $width - $w_width; 
+    $pos_y = $height - $w_height;
+    imagecopy($im, $watermark, $pos_x, $pos_y, 0, 0, $w_width, $w_height);
+    imagejpeg($im, $new_image_name, 100); 
+    imagedestroy($im);
+    unlink($oldimage_name);
+    return true;
+}
+
 
 function watermark_text($oldimage_name, $new_image_name){
     global $font_path, $font_size, $text_show;
