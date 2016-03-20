@@ -140,6 +140,26 @@
                    data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan Pin BB" >
                 </div>
               </div>
+                
+               <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Nama pengguna facebook</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="facebook" id="inputEmail3"          value="<?php if ($iklan['facebook']!='tidak tersedia'){ echo $iklan['facebook']; } ?>"
+                   data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan nama pengguna facebook anda" >
+                </div>
+              </div>
+                
+                <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Url instagram</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                         <span class="input-group-addon">instagram.com/</span>
+                         <input type="text" class="form-control"  name="instagram" id="inputEmail3"          value="<?php if ($iklan['instagram']!='tidak tersedia'){ echo $iklan['instagram']; } ?>"
+                   data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan url instagram anda" >
+                    </div>
+                   
+                </div>
+              </div>
 
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">

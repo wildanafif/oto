@@ -195,6 +195,17 @@
   			<span class="glyphicon glyphicon-phone" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
   		<b style="float:left;"><h4>Pin BB : <?php echo $iklan['pin_bb']; ?></h4></b>
   		<br>
+                <?php if ($iklan['facebook']!='tidak tersedia'){ ?>
+                <hr>
+                <span class="icon-facebook-2" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
+  		<b style="float:left;"><h4>facebook : <?php echo $iklan['facebook']; ?></h4></b>
+  		<br><?php } ?>
+                 <?php if ($iklan['instagram']!='tidak tersedia'){ ?>
+                <hr>
+                <span class="icon-instagram" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
+                <b style="float:left;"><h4>instagram : <a target="_blank" href="https://www.instagram.com/<?php echo $iklan['instagram']; ?>" ><?php echo $iklan['instagram']; ?></a></h4></b>
+  		<br><?php } ?>
+                
   	</div>
   	<div class="alert alert-warning alert-dismissible" role="alert">
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -206,17 +217,16 @@
 		   </center>
 		   
 	</div>
-		<div class="share-buttons" style="margin-bottom: 20px;">
-					<!-- Facebook -->
-					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $share; ?>" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="icon-white icon-facebook"></i> Facebook</a>
-					<!-- Twitter -->
-					<a href="http://twitter.com/home?status=<?php echo $share; ?>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="icon-white icon-twitter"></i> Twitter</a>
-					<!-- Google+ -->
-					<a href="https://plus.google.com/share?url=<?php echo $share; ?>" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="icon-white icon-google"></i> Google+</a>
-					
-					<!-- LinkedIn --> 
-					<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title=&amp;summary=<?php echo $share; ?>" title="Share on LinkedIn" target="_blank" class="btn btn-stumbleupon"><i class="icon-white  icon-linkedin"></i>LinkedIn</a>
-				</div>
+      <p>Bagikan dengan : </p>
+            <div class="share-buttons" style="margin-bottom: 20px;">
+                <!-- Facebook -->
+                <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $share; ?>" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="icon-white icon-facebook"></i> Facebook</a>
+                <!-- Twitter -->
+                <a class="btn btn-info" href="http://twitter.com/home?status=<?php echo $share; ?>" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="icon-white icon-twitter"></i> Twitter</a>
+                <!-- Google+ -->
+                <a class="btn btn-danger" href="https://plus.google.com/share?url=<?php echo $share; ?>" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="icon-white icon-google"></i> Google+</a>
+
+            </div>
 
   </div>
 </div>

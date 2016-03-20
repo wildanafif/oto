@@ -154,7 +154,27 @@
       <?php } ?> data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan Pin BB" >
     </div>
   </div>
-
+ <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Nama pengguna facebook</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  name="facebook" id="inputEmail3"  <?php if (isset($_SESSION['pin_bb'])){ ?>
+        value="<?php echo $_SESSION['facebook']; ?>"
+      <?php } ?> data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan Nama Pengguna Facebook" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Url Instagram</label>
+    <div class="col-sm-10">
+        <div class="input-group">
+            <span class="input-group-addon">instagram.com/</span>
+             <input type="text" class="form-control"  name="instagram" id="inputEmail3"  <?php if (isset($_SESSION['pin_bb'])){ ?>
+        value="<?php echo $_SESSION['instagram']; ?>"
+      <?php } ?> data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Masukkan Url Instagram anda" >
+            
+        </div>
+     
+    </div>
+  </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">

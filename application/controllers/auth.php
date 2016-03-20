@@ -33,6 +33,8 @@ class Auth extends CI_Controller {
                     $_SESSION['daerah']=$sess->daerah;
                     $_SESSION['telp']=$sess->telp;
                     $_SESSION['pin_bb']=$sess->pin_bb;
+                    $_SESSION['facebook']=$sess->facebook;
+                    $_SESSION['instagram']=$sess->instagram;
                     //$_SESSION['password']= $sess->password;
                     
                     
@@ -90,6 +92,8 @@ class Auth extends CI_Controller {
                         $_SESSION['daerah']=$sess->daerah;
                         $_SESSION['telp']=$sess->telp;
                         $_SESSION['pin_bb']=$sess->pin_bb;
+                        $_SESSION['facebook']=$sess->facebook;
+                        $_SESSION['instagram']=$sess->instagram;
                     //$_SESSION['password']= $sess->password;                 
                     
                     }
@@ -101,6 +105,7 @@ class Auth extends CI_Controller {
                     'nama'=>  $nama,
                     'email'=>  '-',
                     'id_user'=> $user_profile['id'],
+                    'facebook'=> $nama,
                     
                     'provider'=> 'facebook' ,
                     'level'=> 'member',
@@ -120,6 +125,8 @@ class Auth extends CI_Controller {
                      $_SESSION['daerah']=$session['daerah'];
                      $_SESSION['telp']=$session['telp'];
                      $_SESSION['pin_bb']=$session['pin_bb'];
+                     $_SESSION['facebook']=$session['facebook'];
+                     $_SESSION['instagram']=$session['instagram'];
                       
                     redirect('profil/setting');
                     }

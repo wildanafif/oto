@@ -90,7 +90,22 @@
                                           <div class="form-group">
                                             <label for="inputPassword3" class="col-sm-2 control-label">Pin BB</label>
                                             <div class="col-sm-10">
-                                              <input type="text" class="form-control" id="inputPassword3" name="pin_bb" value="<?php echo $profil['pin_bb'] ;?>" >
+                                              <input type="text" class="form-control" name="pin_bb" value="<?php echo $profil['pin_bb'] ;?>" >
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Nama Pengguna facebook</label>
+                                            <div class="col-sm-10">
+                                              <input type="text" class="form-control" name="facebook" value="<?php echo $profil['facebook'] ;?>" >
+                                            </div>
+                                          </div>
+                                         <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Instagram</label>
+                                            <div class="col-sm-10">
+                                              <div class="input-group">
+                                                <span class="input-group-addon">https://www.instagram.com/</span>
+                                                <input type="text" class="form-control" name="instagram" value="<?php echo $profil['instagram'] ;?>" >
+                                              </div>
                                             </div>
                                           </div>
                                          

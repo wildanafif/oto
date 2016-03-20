@@ -24,8 +24,9 @@ class Tips extends CI_Controller {
                                 -(Pilih jasa pengiriman murah & terpercaya) agar barang yang anda kirim aman dan tidak berat di ongkos kirim.
                                 <br><br>
                                 <br><b>Pembeli</b><br></br>
-                                -(Usahakan ketemuan/COD) agar barang yang akan dibeli sesuai dengan keinginan.<br>
-                                -(Cari informasi penjual) sebelum melakukan pembayaran transfer usahakan meminta identitas diri penjual (SIM/KTP) agar meminimalisir terjadinya penipuan
+                                - (Usahakan ketemuan/COD(Cash On Delivery)) agar barang yang akan dibeli sesuai dengan keinginan.<br>
+                                - (Cari informasi penjual) sebelum melakukan pembayaran transfer usahakan meminta identitas diri penjual (SIM/KTP) dan mengecek informasi akun media sosial penjual agar meminimalisir terjadinya penipuan
+
 
 ";
         $this->load->view('head',$data);

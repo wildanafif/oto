@@ -85,14 +85,16 @@ class User extends CI_Controller {
 
 
         function perbarui(){
-            
+            $t_instagram=  $this->input->post('instagram');
+           
+            $facebook=$this->input->post('facebook');
             $daerah=$this->input->post('daerah');
             $telp=$this->input->post('telp');
             $pin_bb=$this->input->post('pin_bb');
             $nama=$this->input->post('nama');
             $data_prov = $this->model_user->query_for_control("SELECT * from provinsi where id_provinsi=".$this->input->post('provinsi'));
             $provinsi=$data_prov['nama_provinsi'];
-            $this->model_user->query_insert("UPDATE `user` SET `provinsi`='$provinsi',`daerah`='$daerah',`telp`='$telp',`pin_bb`='$pin_bb' ,`nama`='$nama'  WHERE id_user=".$_SESSION['id_user']);
+            $this->model_user->query_insert("UPDATE `user` SET `provinsi`='$provinsi',`daerah`='$daerah',`telp`='$telp',`pin_bb`='$pin_bb' ,`nama`='$nama' , instagram='$t_instagram' ,facebook='$facebook'  WHERE id_user=".$_SESSION['id_user']);
               $session=$this->model_user->query_for_control("SELECT * from user where id_user=".$_SESSION['id_user']);
            // echo $session['nama'];
             $_SESSION['nama']=$session['nama'];
@@ -103,6 +105,8 @@ class User extends CI_Controller {
              $_SESSION['daerah']=$session['daerah'];
              $_SESSION['telp']=$session['telp'];
              $_SESSION['pin_bb']=$session['pin_bb'];
+             $_SESSION['instagram']=$session['instagram'];
+             $_SESSION['facebook']=$session['facebook'];
             redirect('profil/setting/1');
          }
         

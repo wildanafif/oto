@@ -28,6 +28,16 @@ class Iklan extends CI_Controller {
             } else {
                 $pin_bb = $this->input->post('pin_bb');
             }
+            if ($this->input->post('facebook') == '') {
+                $facebook = "tidak tersedia";
+            } else {
+                $facebook = $this->input->post('facebook');
+            }
+            if ($this->input->post('instagram') == '') {
+                $instagram = "tidak tersedia";
+            } else {
+                $instagram = $this->input->post('instagram');
+            }
             $data_kategori = $this->model_iklan->query_for_control("SELECT * from kategori where id_kategori=" . $this->input->post('kategori'));
             $data_prov = $this->model_iklan->query_for_control("SELECT * from provinsi where id_provinsi=" . $this->input->post('provinsi'));
 
@@ -77,7 +87,9 @@ class Iklan extends CI_Controller {
                 'user_register' => $registered,
                 'id_user' => $id_user,
                 'wa' => $wa,
-                'tgl' => $tgl_sekarang
+                'tgl' => $tgl_sekarang,
+                'facebook'  =>  $facebook,
+                'instagram'    =>  $instagram
             );
             $id_iklan = $this->model_iklan->insert($dataInsert);
 
@@ -468,6 +480,16 @@ class Iklan extends CI_Controller {
             if ($this->input->post('wa')) {
                 $wa = 1;
             };
+             if ($this->input->post('facebook') == '') {
+                $facebook = "tidak tersedia";
+            } else {
+                $facebook = $this->input->post('facebook');
+            }
+            if ($this->input->post('instagram') == '') {
+                $instagram = "tidak tersedia";
+            } else {
+                $instagram = $this->input->post('instagram');
+            }
 
             $data_kategori = $this->model_iklan->query_for_control("SELECT * from kategori where id_kategori=" . $this->input->post('kategori'));
             $data_prov = $this->model_iklan->query_for_control("SELECT * from provinsi where id_provinsi=" . $this->input->post('provinsi'));
@@ -487,7 +509,9 @@ class Iklan extends CI_Controller {
                 'nego' => $nego,
                 'sub_kategori' => $this->input->post('sub_kategori'),
                 'mail' => $this->input->post('maile'),
-                'wa' => $wa
+                'wa' => $wa,
+                'instagram' => $instagram,
+                'facebook'  =>  $facebook
             );
             if ($this->model_iklan->update($id_iklan, $data_update)) {
                 if ($data['iklan'] = $this->model_iklan->query_for_control("SELECT * From iklan WHERE id_iklan=$id_iklan")) {
