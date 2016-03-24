@@ -61,7 +61,7 @@
                                             <div class="form-group">
                                                 <label for="inputPassword3" class="col-sm-2 control-label">Provinsi</label>
                                                 <div class="col-sm-10">
-                                                  <select class="form-control" required name="provinsi"  onChange="getState(this.value);">
+                                                  <select class="form-control"  name="provinsi"  onChange="getState(this.value);" required >
                                                         <option></option>
                                                           <?php foreach ($data as $row): ?>
                                                             <option value="<?php echo $row->id_provinsi;  ?>" <?php if ($row->nama_provinsi==$profil['provinsi']) {
@@ -103,7 +103,7 @@
                                             <label for="inputPassword3" class="col-sm-2 control-label">Instagram</label>
                                             <div class="col-sm-10">
                                               <div class="input-group">
-                                                <span class="input-group-addon">https://www.instagram.com/</span>
+                                                <span class="input-group-addon">instagram.com/</span>
                                                 <input type="text" class="form-control" name="instagram" value="<?php echo $profil['instagram'] ;?>" >
                                               </div>
                                             </div>

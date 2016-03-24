@@ -11,6 +11,9 @@ class Iklan extends CI_Controller {
     function index() {
 
         if ($this->input->post('pasang')) {
+            if ($this->input->post('harga')=='' || $this->input->post('harga_mobile') == ''){
+                redirect('iklan');
+            }
             include('class.uploader.php');
             include('watermark.php');
             $nego = 0;
