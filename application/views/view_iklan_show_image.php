@@ -50,27 +50,13 @@
   	
   </div>
   <div class="panel-body">
-    <center class="hilang">
-	<div id="myGallery" >
-	<?php $foto_mobile ; $no=1;foreach ($foto as $key => $roww) {
-		# code...
-	 ?>
-		<li><img src="<?=base_url()?><?php echo $roww->url_foto_iklan; ?>" alt="" />
-		<?php if ($no==1) {
-			$foto_mobile=$roww->url_foto_iklan;
-		} ?>
-	
-		<?php ; $no++; } ?>
-		
-	</div>
-</center>
 
 
-<center class="muncul">
+<center class="">
 	<?php foreach ($produk as $key) {?>
 		<img src="<?=base_url()?><?php echo $key['url_foto_iklan']; ?>" class="img-responsive" alt="Responsive image">
 
-	<? } ?>
+	<?php } ?>
 	<hr>
 <?php echo $halaman; ?>
 </center>

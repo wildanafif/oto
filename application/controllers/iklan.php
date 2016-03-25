@@ -11,9 +11,9 @@ class Iklan extends CI_Controller {
     function index() {
 
         if ($this->input->post('pasang')) {
-            if ($this->input->post('harga')=='' || $this->input->post('harga_mobile') == ''){
-                redirect('iklan');
-            }
+//            if ($this->input->post('harga')=='' || $this->input->post('harga_mobile') == ''){
+//                redirect('iklan');
+//            }
             include('class.uploader.php');
             include('watermark.php');
             $nego = 0;
@@ -48,16 +48,22 @@ class Iklan extends CI_Controller {
             if ($this->input->post('harga_mobile') != '') {
                 $harga_item_lain = $this->input->post('harga_mobile');
             } else {
+                
                 $str = $this->input->post('harga');
-                $hr = explode(" ", $str);
-                $min_koma = explode(",", $hr[1]);
-                $hrga = explode(".", $min_koma[0]);
-                $harga_fix = '';
-                foreach ($hrga as $key => $value) {
-                    $harga_fix .= $value;
-                }
+                if ($str==""){
+                    $harga_item_lain = 0;
+                }  else {
+                    $hr = explode(" ", $str);
+                    $min_koma = explode(",", $hr[1]);
+                    $hrga = explode(".", $min_koma[0]);
+                    $harga_fix = '';
+                    foreach ($hrga as $key => $value) {
+                        $harga_fix .= $value;
+                    }
 
-                $harga_item_lain = intval($harga_fix);
+                    $harga_item_lain = intval($harga_fix);
+                }
+                
             }
 
             if (isset($_SESSION['id_user'])) {
@@ -142,30 +148,30 @@ class Iklan extends CI_Controller {
                         if ($files['metas'][$i]['extension'] == 'png') {
                             $imag = $files['files'][$i];
                             $new_name = $path . time() . $i . ".png";
-                            watermark_image_png($imag, $new_name);
+                            //watermark_image_png($imag, $new_name);
                             $dataInsert_img = array(
                                 'id_iklan' => $id_iklan['id_iklan'],
-                                'url_foto_iklan' => $new_name
+                                'url_foto_iklan' => $imag
                             );
                         } elseif ($files['metas'][$i]['extension'] == 'jpg') {
                             $imag = $files['files'][$i];
                             $new_name = $path . time() . $i . ".jpg";
-                            watermark_image_jpg($imag, $new_name);
+                            //watermark_image_jpg($imag, $new_name);
                             $dataInsert_img = array(
                                 'id_iklan' => $id_iklan['id_iklan'],
-                                'url_foto_iklan' => $new_name
+                                'url_foto_iklan' => $imag
                             );
                         } elseif ($files['metas'][$i]['extension'] == 'jpeg') {
                             $imag = $files['files'][$i];
                             $new_name = $path . time() . $i . ".jpg";
-                            watermark_image_jpeg($imag, $new_name);
+                            //watermark_image_jpeg($imag, $new_name);
                             $dataInsert_img = array(
                                 'id_iklan' => $id_iklan['id_iklan'],
-                                'url_foto_iklan' => $new_name
+                                'url_foto_iklan' => $imag
                             );
                         }//echo $new_name."<br>";
                         if ($i == 0) {
-                            $this->model_iklan->query_insert('UPDATE `iklan` SET `temp_foto`="' . $new_name . '" where id_iklan=' . $id_iklan['id_iklan']);
+                            $this->model_iklan->query_insert('UPDATE `iklan` SET `temp_foto`="' . $imag . '" where id_iklan=' . $id_iklan['id_iklan']);
                         }
                         $this->model_iklan->insert_image($dataInsert_img);
                     }
@@ -265,9 +271,12 @@ class Iklan extends CI_Controller {
     }
 
     function show_image() {
-        $id = $this->uri->segment(3);
-        $this->model_iklan->query_insert("UPDATE `iklan` SET `dilihat`=dilihat+1 WHERE id_iklan=" . $id);
+        $id = intval($this->uri->segment(3)) ;
+        //$this->model_iklan->query_insert("UPDATE `iklan` SET `dilihat`=dilihat+1 WHERE id_iklan=" . $id);
         $data['iklan'] = $this->model_iklan->query_for_control("SELECT * From iklan where id_iklan=" . $id);
+        if (!isset($data['iklan']['id_iklan'])){
+            redirect('home');
+        }
         $data['foto'] = $this->model_iklan->get_by_id_foto($id);
         $data['kategori'] = $this->model_iklan->getAll_kategori();
         $data['title'] = $data['iklan']['judul_iklan'];
@@ -310,7 +319,7 @@ class Iklan extends CI_Controller {
         if ($this->uri->segment(4) == null) {
             
         } else {
-            $limit = $this->uri->segment(4);
+            $limit = intval($this->uri->segment(4));
         }
 
 

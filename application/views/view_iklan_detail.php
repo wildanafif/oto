@@ -50,21 +50,59 @@
   	
   </div>
   <div class="panel-body">
-    <center class="hilang">
-	<div id="myGallery" >
+   
 	<?php $foto_mobile ; $no=1;foreach ($foto as $key => $roww) {
 		# code...
 	 ?>
-		<li><img src="<?=base_url()?><?php echo $roww->url_foto_iklan; ?>" alt="" />
+		
 		<?php if ($no==1) {
 			$foto_mobile=$roww->url_foto_iklan;
 		} ?>
 	
 		<?php ; $no++; } ?>
 		
-	</div>
-</center>
+	
 
+	
+	<?php $foto_mobile ; $no=1;foreach ($foto as $key => $roww) {
+		# code...
+	 ?>
+		<?php if ($no==1) {
+			$foto_mobile=$roww->url_foto_iklan;
+		} ?>
+	
+		<?php ; $no++; } ?>
+		
+      <script type="text/javascript" >
+          function show_img(img ,id_current){
+              document.getElementById("foto_thumbnail").src = img;
+              document.getElementById("foto_thumbnail").src = img;
+              $(".gv_thumbnail").css("opacity" ,"0.3");
+              document.getElementById(id_current).style = 'width: 80px; height: 60px; opacity: 100%;';
+              
+          }
+      </script>
+
+      <center class="hilang">
+          <img  id="foto_thumbnail" src="<?= base_url() ?><?php echo $foto_mobile; ?>" class="img-responsive" alt="Responsive image">
+          <hr>
+          <div class="" style="width: 100%; height: 60px; bottom: 0px; left: 0px;">
+              <div class="" style="width: 510px; height: 60px; left: -255px;">
+                   <?php $inisial_id=0; foreach ($foto as $ft){ ?>
+                  <div class="gv_frame"  style="width: 80px; height: 60px; margin-right: 5px; margin-bottom: 5px;">
+                      <div id="item_thumbanail<?php echo $inisial_id; ?>" class="gv_thumbnail" style="width: 80px; height: 60px; opacity: <?php if ($inisial_id==0){echo "100%";}else{ echo "0.3"; } ?>;">
+                          <img onclick="show_img('<?= base_url() ?><?php echo $ft->url_foto_iklan; ?>','item_thumbanail<?php echo $inisial_id; ?>')" style="visibility: visible; width: 100%; height: 100%; left: 0px;" src="<?= base_url() ?><?php echo $ft->url_foto_iklan; ?>">
+                      </div>
+                  </div>
+              <?php $inisial_id++; } ?>
+                
+                  
+              </div>
+          </div>
+         
+       
+      </center>
+      <br>
 
 <center class="muncul">
 	<img src="<?=base_url()?><?php echo $foto_mobile; ?>" class="img-responsive" alt="Responsive image">
@@ -82,7 +120,7 @@
 					  	echo "Nego";
 					  	}  ?></h4></b>
  </div>
-<br>
+<br><br><br>
 <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 						  <ul class="resp-tabs-list">
 						  	  <li class="resp-tab-item " aria-controls="tab_item-0" role="tab"><span>Deskripsi </span></li>
