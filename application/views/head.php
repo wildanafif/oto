@@ -528,7 +528,7 @@ echo $iklan['judul_iklan'] ;}else{
 
                             <li >
                                 <a href="<?php echo site_url() ?>auth/masuk" style="color:#21AEE8;" > <i class="icon-white icon-user">
-                                    </i>  Akun Saya <i class="fa fa-angle-down"></i></a>
+                                    </i>  Login / Daftar <i class="fa fa-angle-down"></i></a>
 
                             </li>
 <?php } ?>
@@ -592,7 +592,7 @@ echo $iklan['judul_iklan'] ;}else{
 
                             <li >
                                 <a href="<?php echo site_url() ?>auth/masuk" > <i class="icon-white icon-user">
-                                    </i>  Akun Saya <i class="fa fa-angle-down"></i></a>
+                                    </i>  Login / Daftar <i class="fa fa-angle-down"></i></a>
 
                             </li>
 <?php } ?>
