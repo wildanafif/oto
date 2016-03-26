@@ -4,7 +4,7 @@
      
       
                 <div class="container row">
-                  <div class="col-md-5">
+                  <div class="col-md-5 hilang">
                     <div class="panel panel-default">
                     <div class="panel-heading"><h3 style="text-align:center;">Otomotifstore.com</h3></div>
                     <div class="panel-body" style="background-color:#f5f5f5;" >
@@ -51,6 +51,17 @@
                         echo 'style="color:#000000;"';
                         } ?>
                         > <i class="icon-point-right"></i> Aturan Umum</h4>
+
+                   </a>
+                      <hr >
+                          <a href="<?=base_url()?>kritik_saran">
+                        <h4 
+                      <?php if ($aktif=="kritik_saran") { ?>
+                      style="color:#21aee8;"
+                      <?php }else{
+                        echo 'style="color:#000000;"';
+                        } ?>
+                        > <i class="icon-point-right"></i> Kritik & Saran</h4>
 
                    </a>
                       <hr >

@@ -80,7 +80,10 @@ class Model_global extends CI_Model {
     function query_insert($data) {
        $query = $this->db->query($data);
     }
-
+     function data_insert ($data ,$tabel) {
+        $insert = $this->db->insert($tabel, $data); //nama tabel, terus data yang mo di masukkan
+        return $insert;
+    }
     function insert($data) {
         $insert = $this->db->insert('posting', $data); //nama tabel, terus data yang mo di masukkan
         return $insert;

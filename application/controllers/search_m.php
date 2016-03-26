@@ -13,6 +13,9 @@ class Search_m extends CI_Controller {
        
     }
     function get_data_daerah(){
+        if(!$_POST){
+            redirect('home');
+        }
         $id=$this->input->post('id_provinsi');
         $data=$this->model_global->query_getAll("SELECT * From daerah where id_provinsi=$id");
 

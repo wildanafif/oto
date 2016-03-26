@@ -419,6 +419,9 @@ class Search extends CI_Controller {
     }
 
     function data_lokasi_modal(){
+        if(!$_POST){
+            redirect('home');
+        }
         $id=$this->input->post('id_provinsi');
         $data_prov=$this->model_global->query_for_control("SELECT * From provinsi where id_provinsi=$id");
 
@@ -2215,6 +2218,9 @@ class Search extends CI_Controller {
 
     }
     function data_kategori(){
+        if(!$_POST){
+            redirect('home');
+        }
         $id_kategori=$this->input->post('id_kategori');
         $kategori=$this->input->post('nama_kategori');
         $data=$this->model_global->query_getAll("SELECT * From sub_kategori where id_kategori=$id_kategori");
