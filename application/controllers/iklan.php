@@ -296,16 +296,9 @@ class Iklan extends CI_Controller {
         $config['per_page'] = 1;
         //jumah link no halaman 
         $config['num_links'] = 2;
-        //segment URL yang akan dijadikan pemotongan data
-        //baca di http://ozs.web.id/2014/08/membuat-url-dengan-class-url-di-codeigniter/
         $config['uri_segment'] = 4;
-        // awal membuka penomoran 
-        // menggunakan class bootstrap
-        // akhi membuka penomoran 
-        //class bootstrap untuk awal halaman
-        $config['first_link'] = '<span class="">Gambar Sebelumnya</span>';
-        //class bootstrap untuk akhir halaman
-        $config['last_link'] = '<span class="">Gambar Selanjutnya</span>';
+        $config['first_link'] = '<span  style="display:none;">Gambar Sebelumnya</span>';
+        $config['last_link'] = '<span style="display:none;>Gambar Selanjutnya</span>';
         //class bootstrap untuk  halaman berikutnya
         $config['next_link'] = '<span class="">Gambar Selanjutnya</span>';
         //class bootstrap untuk  halaman sebelumnya

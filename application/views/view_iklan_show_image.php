@@ -179,6 +179,16 @@
   			<span class="glyphicon glyphicon-phone" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
   		<b style="float:left;"><h4>Pin BB : <?php echo $iklan['pin_bb']; ?></h4></b>
   		<br>
+                <?php if ($iklan['facebook']!='tidak tersedia'){ ?>
+                <hr>
+                <span class="icon-facebook-2" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
+  		<b style="float:left;"><h4>facebook : <?php echo $iklan['facebook']; ?></h4></b>
+  		<br><?php } ?>
+                 <?php if ($iklan['instagram']!='tidak tersedia'){ ?>
+                <hr>
+                <span class="icon-instagram" aria-hidden="true" style="float:left; margin-right:30px; margin-left:20px;"></span>
+                <b style="float:left;"><h4>instagram : <a target="_blank" href="https://www.instagram.com/<?php echo $iklan['instagram']; ?>" ><?php echo $iklan['instagram']; ?></a></h4></b>
+  		<br><?php } ?>
   	</div>
   	<div class="alert alert-warning alert-dismissible" role="alert">
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
