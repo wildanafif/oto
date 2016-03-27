@@ -104,8 +104,8 @@ class Iklan extends CI_Controller {
 
             $uploader = new Uploader();
             $data = $uploader->upload($_FILES['files'], array(
-                'limit' => 10, //Maximum Limit of files. {null, Number}
-                'maxSize' => 10, //Maximum Size of files {null, Number(in MB's)}
+                'limit' => 15, //Maximum Limit of files. {null, Number}
+                'maxSize' => 15, //Maximum Size of files {null, Number(in MB's)}
                 'extensions' => null, //Whitelist for file extension. {null, Array(ex: array('jpg', 'png'))}
                 'required' => false, //Minimum one file is required for upload {Boolean}
                 'uploadDir' => 'uploads/', //Upload directory {String}

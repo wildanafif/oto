@@ -447,7 +447,7 @@ echo $iklan['judul_iklan'] ;}else{
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="<?php echo site_url(); ?>">
-                        <img alt="Brand" class="img-responsive" src="<?php echo site_url(); ?>assets/img/f_lg2.png" style="margin-top:-7%;">
+                        <img alt="Brand" class="img-responsive" src="<?php echo site_url(); ?>assets/img/mobile_logo.png" style="margin-top:-7%;">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
