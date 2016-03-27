@@ -144,7 +144,7 @@
                 <div class="product" style="background-color:#eae9e9; text-align:center;-webkit-box-shadow: 5px 5px 3px 0px #666666;-moz-box-shadow: 5px 5px 3px 0px #666666;box-shadow: 5px 5px 3px 0px #666666;">
                     <center><img src="<?=base_url()?><?php echo $key->temp_foto; ?>" alt="..." class="img-thumbnail"></center>
                     <br>
-                    <span style="font-size: 20px; color: #000000; margin-top:20px;";> <?php echo substr($key->judul_iklan, 0,20) ; ?> </span>
+                    <span style="font-size: 20px; color: #000000; margin-top:20px;";> <?php echo $key->judul_iklan ; ?> </span>
                     <br><h4 style="padding-left:10px;padding-top:10px;color:#00bcc9;"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span><b><?php  $format_indonesia20 = number_format ($key->harga, 2, ',', '.'); echo "Rp. ". $format_indonesia20; ?></b></h4> 
                     <br><br> <br> 
                 </div>

@@ -55,7 +55,7 @@
                                        
                                                       <p class="" style="margin-bottom:5px;" >
                                                         <?php echo $data_produk['daerah']; ?> -  <?php echo $data_produk['provinsi']; ?> </p>
-                                                  
+                                                   <a href="<?= base_url()?>favorite/hapus/<?php echo $data_produk['id_iklan'].'/'.$data_produk['waktu']; ?>"   class="muncul" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Hapus dari favorit</a>
                                           </div>
                                       </div>
                                   </div>

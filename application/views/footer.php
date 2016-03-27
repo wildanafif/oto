@@ -2,7 +2,7 @@
     <div class="footer" style="background-color:#eae9e9;
   bottom:0px;">
         <div class="container">
-            <div class="col-md-4 footer-left">
+            <div class="col-md-3 footer-left">
                 <a href="<?php echo site_url() ?>"><img src="<?php echo site_url(); ?>assets/img/logoe.png" alt=""></a>
                 <p class="footer-class">© 2016 Otomotifstore.com All Rights Reserved  </p>
             </div>
@@ -18,8 +18,8 @@
                
                
             </div>
-            <div class="col-md-2 footer-middle">
-                    <li><a href="<?=base_url()?>kritik_saran">Kritil & Saran</a> </li>
+            <div class="col-md-3 footer-middle">
+                    <li><a href="<?=base_url()?>kritik_saran">Kritik & Saran</a> </li>
                    
                
                
