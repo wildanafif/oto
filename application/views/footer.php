@@ -107,7 +107,7 @@
  <div id="simpleModal" class="modal">
 <div class="mdl-content" id="o">
 <center>
-<img src="<?=base_url()?>assets/images/loading.gif" /></center>
+<img src="<?=base_url()?>assets/images/ajax-loader.gif" /></center>
 
 </div>
 
