@@ -45,26 +45,9 @@ class Iklan extends CI_Controller {
             $data_prov = $this->model_iklan->query_for_control("SELECT * from provinsi where id_provinsi=" . $this->input->post('provinsi'));
 
 
-            if ($this->input->post('harga_mobile') != '') {
-                $harga_item_lain = $this->input->post('harga_mobile');
-            } else {
-                
-                $str = $this->input->post('harga');
-                if ($str==""){
-                    $harga_item_lain = 0;
-                }  else {
-                    $hr = explode(" ", $str);
-                    $min_koma = explode(",", $hr[1]);
-                    $hrga = explode(".", $min_koma[0]);
-                    $harga_fix = '';
-                    foreach ($hrga as $key => $value) {
-                        $harga_fix .= $value;
-                    }
-
-                    $harga_item_lain = intval($harga_fix);
-                }
-                
-            }
+           
+                $harga_item_lain =  intval($this->input->post('harga')) ;
+          
 
             if (isset($_SESSION['id_user'])) {
                 $id_user = $_SESSION['id_user'];

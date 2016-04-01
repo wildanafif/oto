@@ -83,8 +83,8 @@
     <label for="inputEmail3" class="col-sm-2 control-label">Harga</label>
     <div class="col-sm-10">
        
-            <input type="text" class="form-control hilang"  id="harga_satuan_menu_lain" ata-affixes-stay="true" data-prefix="Rp. " data-thousands="." data-decimal="," name="harga" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus"  data-content="Tuliskan dengan harga yang realistis sesuai dengan kondisi barang ,umur dan kualitas barang "  >
-            <input type="number" class="form-control muncul"  name="harga_mobile" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus"  data-content="Tuliskan dengan harga yang realistis sesuai dengan kondisi barang ,umur dan kualitas barang "  >
+           
+            <input type="text" class="form-control"  name="harga" data-container="body" data-toggle="popover" data-placement="top" data-trigger="focus"  data-content="Tuliskan dengan harga yang realistis sesuai dengan kondisi barang ,umur dan kualitas barang "  >
         <input  type="checkbox" value="1" name="nego">  Nego
       </div>
   </div>
@@ -288,6 +288,15 @@ $(document).ready(function() {
                     validators: {
                          notEmpty: {
                             message: '<div class="alert alert-danger"  role="alert"><h6>Daerah Tidak Boleh Kosong</h6></div>'
+                        }
+                      
+                    }
+                }, harga: {
+                    validators: {
+                         notEmpty: {
+                            message: '<div class="alert alert-danger"  role="alert"><h6>Harga Tidak Boleh Kosong</h6></div>'
+                        }, digits: {
+                            message: '<div class="alert alert-danger"  role="alert"><h6>Format salah</h6></div>'
                         }
                       
                     }

@@ -37,11 +37,11 @@
                     <center><h3 class="panel-title">Pilih<small> Provinsi</small>  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> &times; </span></button></h3></center>
                 </div>
                 <div class="panel-body"> 
-                    <?php foreach ($prov as $key) {
+                    <?php if (isset($prov)) { foreach ($prov as $key) {
                         
                      ?>           
                     <div class="col-md-4"  style="margin-top:10px;"><a href="" onClick="addProv('<?php echo $key->nama_provinsi; ?>','<?php echo $key->id_provinsi; ?>')"  data-dismiss="modal" disabled style=";"><i><b><?php echo $key->nama_provinsi; ?></b></i> </a></div>
-                    <?php }  ?>
+                    <?php } } ?>
                 </div>
             </div>
 
