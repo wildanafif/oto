@@ -76,7 +76,7 @@
 <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Iklan</label>
     <div class="col-sm-10">
-     <textarea class="form-control" rows="3" required name="deskripsi_iklan" data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Tuliskan Deskripsi yang menarik , semua informasi penting dari barang atau jasa yang anda tawarkan " ></textarea>
+     <textarea class="form-control" rows="9" required name="deskripsi_iklan" data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Tuliskan Deskripsi yang menarik , semua informasi penting dari barang atau jasa yang anda tawarkan " ></textarea>
     </div>
   </div>
    <div class="form-group">

@@ -11,7 +11,7 @@ class Error extends CI_Controller {
         	$data['title']="404 error";
          //	$data['kategori']=  $this->model_iklan->getAll_kategori();
             if (isset($_SESSION['id_user'])) {
-              $data['favori t']=$this->model_iklan->query_for_control("SELECT count(id_favorite) as favorit from favorite where id_user=".$_SESSION['id_user']);
+              $data['favorit']=$this->model_iklan->query_for_control("SELECT count(id_favorite) as favorit from favorite where id_user=".$_SESSION['id_user']);
 
             }
             $data['kategori']=  $this->model_iklan->getAll_kategori();

@@ -894,8 +894,7 @@ class Search extends CI_Controller {
             }else{
                 $limit=intval($this->uri->segment(3));
             }
-            $data['produk'] = $this->model_global->data_paging("SELECT * FROM iklan LIMIT "."$limit".",".$config['per_page']."");
-    // kirim data dan hasil paging ke file application/views/v_produk.php
+            $data['produk'] = $this->model_global->data_paging("SELECT * FROM iklan ORDER BY id_iklan DESC LIMIT "."$limit".",".$config['per_page']."");
 
             $data['title']=  "Otomotif Store";
             if (isset($_SESSION['id_user'])) {

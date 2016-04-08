@@ -9,12 +9,13 @@
         <?php if (isset($meta_og)){ ?>
         <meta property="og:title" content="<?php echo $iklan['judul_iklan']; ?>" />
         <meta property="og:image" content="<?php echo site_url(); ?><?php echo $iklan['temp_foto']; ?>" />
-        <meta property="og:description" content="<?php echo $iklan['deskripsi_iklan'] ?>" />
+        <?php $konten_meta_replace=str_replace('"','',$iklan['deskripsi_iklan']); ?>
+        <meta property="og:description" content="<?php echo $konten_meta_replace  ?>" />
         <meta property="og:url" content="<?php echo $share; ?>" />
         <?php }else{ ?>
         <meta property="og:title" content="Otomotifstore" />
         <meta property="og:image" content="<?php echo site_url(); ?>uploads/images_non.jpg" />
-        <meta property="og:description" content="Otomotifstore ,tempat jual beli otomotif" />
+        <meta property="og:description" content="Otomotifstore ,situs jual beli otomotif" />
         <meta property="og:url" content="http://www.otomotifstore.com/" />
         <?php }?>
         <meta property="fb:app_id" content="100000646889175" />
@@ -23,7 +24,7 @@
         
         <meta name="description" content="<?php if (isset($meta_og)){
 echo $iklan['judul_iklan'] ;}else{
-        echo 'Otomotifstore tempat jual beli otomotif';} ?>"/>
+        echo 'Otomotifstore Situs jual beli otomotif';} ?>"/>
         <meta name="keywords" content="otomotifstore <?php
         if (isset($meta['keywords'])) {
             echo "," . $meta['keywords'];
@@ -39,6 +40,16 @@ echo $iklan['judul_iklan'] ;}else{
         <link href="<?= base_url() ?>assets/icomoon/style.css" rel="stylesheet">
         <link href="<?= base_url() ?>assets/css/bootstrapValidator.css" rel="stylesheet">
         <link href="<?= base_url() ?>assets/custom/style.css" rel="stylesheet" type="text/css" media="all" />  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75863343-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
         <link href='http://fonts.googleapis.com/css?family=Amaranth:400,700' rel='stylesheet' type='text/css'>
         <script src="<?= base_url() ?>assets/js/jquery.min.js"></script>

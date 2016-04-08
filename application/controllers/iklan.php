@@ -56,6 +56,10 @@ class Iklan extends CI_Controller {
                 $id_user = 0;
                 $registered = 0;
             }
+            $j_iklan=  str_replace("'", "", $this->input->post('judul_iklan'));
+            $i_nama=  str_replace("'", "", $this->input->post('nama'));
+            $i_deskripsi=nl2br($this->input->post('deskripsi_iklan'));
+            $i_deskripsi_fix=str_replace("'", "", $i_deskripsi);
             date_default_timezone_set("Asia/Jakarta");
 
             $tgl_sekarang = date("Y-m-d G:i:s");
@@ -63,12 +67,12 @@ class Iklan extends CI_Controller {
             $wkt = time();
             $dataInsert = array(
                 'kondisi' => $this->input->post('kondisi'),
-                'judul_iklan' => $this->input->post('judul_iklan'),
+                'judul_iklan' => $j_iklan,
                 'kategori' => $data_kategori['nama_kategori'],
-                'deskripsi_iklan' => $this->input->post('deskripsi_iklan'),
+                'deskripsi_iklan' => $i_deskripsi_fix ,
                 'harga' => $harga_item_lain,
                 'provinsi' => $data_prov['nama_provinsi'],
-                'nama' => $this->input->post('nama'),
+                'nama' => $i_nama,
                 '`telp' => $this->input->post('telp'),
                 'pin_bb' => $pin_bb,
                 'waktu' => $wkt,
@@ -487,7 +491,7 @@ class Iklan extends CI_Controller {
                 'kondisi' => $this->input->post('kondisi'),
                 'judul_iklan' => $this->input->post('judul_iklan'),
                 'kategori' => $data_kategori['nama_kategori'],
-                'deskripsi_iklan' => $this->input->post('deskripsi_iklan'),
+                'deskripsi_iklan' => nl2br($this->input->post('deskripsi_iklan')) ,
                 'harga' => $harga_item_lain,
                 'provinsi' => $data_prov['nama_provinsi'],
                 'nama' => $this->input->post('nama'),

@@ -65,9 +65,18 @@
                 </div>
               </div>
               <div class="form-group">
+                 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+                 <script>tinymce.init({
+  selector: "textarea",
+  height: 200,
+  toolbar: false,
+  menubar: "tools",
+     statusbar: false,
+
+});</script>
                 <label for="inputEmail3" class="col-sm-2 control-label">Deskripsi Iklan</label>
                 <div class="col-sm-10">
-                 <textarea class="form-control" rows="3" required name="deskripsi_iklan" data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Tuliskan Deskripsi yang menarik , semua informasi penting dari barang atau jasa yang anda tawarkan " ><?php echo $iklan['deskripsi_iklan']; ?></textarea>
+                 <textarea class="form-control" rows="9" required name="deskripsi_iklan" data-container="body" data-toggle="popover" data-placement="top"data-trigger="focus"  data-content="Tuliskan Deskripsi yang menarik , semua informasi penting dari barang atau jasa yang anda tawarkan " ><?php echo $iklan['deskripsi_iklan']; ?></textarea>
                 </div>
               </div>
                <div class="form-group">

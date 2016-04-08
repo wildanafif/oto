@@ -130,7 +130,7 @@
 							<div class="resp-tabs-container">
 							    <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Product Description</h2><div class="tab-1 resp-tab-content resp-tab-content-active" aria-labelledby="tab_item-0" style="display:block">
 									<div class="facts">
-									 	<?php echo $iklan['deskripsi_iklan']; ?>        
+									 	<?php $desk= str_replace('<p>', '<p style="margin-bottom:-35px;" >', $iklan['deskripsi_iklan']); echo $desk ?>              
 							        </div>
 							    	</div>
 							     									
